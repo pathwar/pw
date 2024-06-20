@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$(pwctl passphrase 0) > ~super-bobby/.passwd

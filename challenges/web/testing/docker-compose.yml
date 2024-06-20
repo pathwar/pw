@@ -1,0 +1,5 @@
+testing:
+  build: .
+  ports:
+  - 80
+  - 22
