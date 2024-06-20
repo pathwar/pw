@@ -2,11 +2,13 @@ package pwcompose
 
 import (
 	"encoding/json"
+	fmt "fmt"
 	"io/ioutil"
 	"os"
 	"os/exec"
 	"path"
 	"path/filepath"
+	"strings"
 
 	"go.uber.org/zap"
 	"gopkg.in/yaml.v3"
@@ -102,6 +104,7 @@ func Prepare(opts PrepareOpts) (string, error) {
 		}
 		if service.Image == "" {
 			if !opts.NoPush {
+				challengeName = strings.ToLower(challengeName)
 				service.Image = opts.Prefix + challengeName + ":" + name
 				service.Labels[serviceOrigin] = "was-built"
 			} else {
@@ -136,6 +139,9 @@ func Prepare(opts PrepareOpts) (string, error) {
 		return "", errcode.ErrComposeWriteTempFile.Wrap(err)
 	}
 	tmpFile.Close()
+	if opts.Logger.Check(zap.DebugLevel, "") != nil {
+		fmt.Fprintln(os.Stderr, string(tmpData))
+	}
 
 	if !opts.NoPush {
 		// build and push images to dockerhub (don't forget to setup your credentials just type : "docker login" in bash)
