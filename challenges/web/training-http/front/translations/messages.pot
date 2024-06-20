@@ -1,0 +1,150 @@
+msgid "Home"
+msgstr ""
+
+msgid "HTTP Methods"
+msgstr ""
+
+msgid "HTTP Headers"
+msgstr ""
+
+msgid "HTTP Redirection"
+msgstr ""
+
+msgid "HTTP Cookies"
+msgstr ""
+
+msgid "Well done!"
+msgstr ""
+
+msgid "This page"
+msgstr ""
+
+msgid "expects a POST request with two parameters, login and password, but you won\'t find anywhere on the page to input these parameters."
+msgstr ""
+
+msgid "Instead, you\'ll have to complete this request manually with curl (look at the -d option)."
+msgstr ""
+
+msgid "W00t! Seems you are a real hacker!"
+msgstr ""
+
+msgid "Try to change your User-Agent to <b>Sup3rH4x0RBr0ws3r</b> to get the passphrase !"
+msgstr ""
+
+msgid "HTTP redirection"
+msgstr ""
+
+msgid "Congrats! The passphrase is"
+msgstr ""
+
+msgid "Try to set the value of the cookie <b>chocolate</b> to <b>isgood</b> !"
+msgstr ""
+
+msgid "Training HTTP"
+msgstr ""
+
+msgid "Introduction"
+msgstr ""
+
+msgid "HTTP is a client-server protocol commonly used by web browsers (or HTTP clients) and web servers to communicate."
+msgstr ""
+
+msgid "This tutorial will introduce you to the basics of the protocol (methods, headers, and modifications)."
+msgstr ""
+
+msgid "Once done, go check the RFCs 1945, and 7230 to 7235 (and a few others) for an in-depth explanation of the protocol. If you don't know how to find an RFC, google is your friend."
+msgstr ""
+
+msgid "HTTP offers multiple methods (with some extensions, like WebDAV, but you won't see them much)."
+msgstr ""
+
+msgid "The five most used are:"
+msgstr ""
+
+msgid "Get a resource specified by the request URI. Parameters can be passed in the query string"
+msgstr ""
+
+msgid "Send data to a server (for example, the content of a form). Parameters are passed in the body of the requests."
+msgstr ""
+
+msgid "Used to create a resource at the requested URI. Data is passed inside the body of the request."
+msgstr ""
+
+msgid "The opposite of PUT. Used to delete the resource at the request URI."
+msgstr ""
+
+msgid "Retrieve only the response headers, without the body."
+msgstr ""
+
+msgid "Challenge"
+msgstr ""
+
+msgid "Request Headers"
+msgstr ""
+
+msgid "When a client send a request to a server, it can send headers to give more information about the request (e.g. languages supported by the client, hostname of the requested website, stored cookies)."
+msgstr ""
+
+msgid "You can easily change the request headers sent by your browser with the help of an extension or a proxy that intercepts the requests it makes."
+msgstr ""
+
+msgid "Response Headers"
+msgstr ""
+
+msgid "When a web server sends a response to a client, it can send along a few response headers, containing information about the response (like its size), or instructions for the browser, e.g. if, or for how long, it should cache the page."
+msgstr ""
+
+msgid "This page has sent you a custom header containing a passphrase. See if you can find it! (Tip: You can use the debug console of your browser.)"
+msgstr ""
+
+msgid "As seen previously, web servers can send HTTP headers to the client."
+msgstr ""
+
+msgid "A commonly used header is"
+msgstr ""
+
+msgid "This header is used to redirect the client to another page or website (for example, to redirect the user to their profile page on succesful login)."
+msgstr ""
+
+msgid "The following link will send your browser an HTTP redirection to this page that will automatically be followed."
+msgstr ""
+
+msgid "Redirection"
+msgstr ""
+
+msgid "HTTP clients are not required to follow redirections. For example, curl does not follow them by default."
+msgstr ""
+
+msgid "Try requesting the redirection page with curl to get the passphrase."
+msgstr ""
+
+msgid "Basics"
+msgstr ""
+
+msgid "HTTP itself is a stateless protocol (meaning that each request is independent), which is problematic for most web applications, as they need to keep track of users' sessions – for example, whether the user is logged in, and what products they've added to their shopping cart."
+msgstr ""
+
+msgid "To bypass this limitations, HTTP cookies were created."
+msgstr ""
+
+msgid "Cookies are automatically sent by the client with the header 'Cookie' containing all the valid cookies for the current domain, separated by a semicolon. (You will have the occasion to study this behaviour later in some levels :)). Using the above example, any subsequent request to foo.com will include the two cookies set by the server:"
+msgstr ""
+
+msgid "Cookies Manipulation"
+msgstr ""
+
+msgid "When you opened this page for the first time, the server sent a cookie named"
+msgstr ""
+
+msgid "to your browser"
+msgstr ""
+
+msgid "As cookie are stored client-side, you can easily modify or delete them."
+msgstr ""
+
+msgid "There is a lots of way to do this, but the simplest is to use a browser extensions (for Chrome or Chromium, you can use EditThisCookie, for other browsers, check"
+msgstr ""
+
+msgid "here"
+msgstr ""
+

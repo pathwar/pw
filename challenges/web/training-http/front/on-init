@@ -1,4 +1,4 @@
 #!/bin/sh -e
 
 pass=$(pwinit passphrase 0)
-sed -i -e "s/__PASSPHRASE__/$pass/" /var/www/html/step4.php;
+sed -i -e "s/__PASSPHRASE__/$pass/" /var/www/html/index.php;

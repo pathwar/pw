@@ -1,0 +1,36 @@
+<article>
+    <h2>_('Basics')</h2>
+    <p>_('HTTP itself is a stateless protocol (meaning that each request is independent), which is problematic for most web applications, as they need to keep track of users' sessions – for example, whether the user is logged in, and what products they've added to their shopping cart.')
+        _('To bypass this limitations, HTTP cookies were created.')</p>
+            <h2>How HTTP cookies work</h2>
+            <p>A cookie is typically set by the server by sending a <b>Set-Cookie</b> header to the client (per cookie).
+            A response that set cookies looks like this:</p>
+<pre class="code">
+GET / HTTP/1.1
+Host: foo.com
+
+HTTP/1.1 200 OK
+Set-Cookie: bar=42; Path=/; Domain=.foo.com
+Set-Cookie: session=12345; HTTPOnly
+...            
+</pre>
+           
+    <p>_('Cookies are automatically sent by the client with the header 'Cookie' containing all the valid cookies for the current domain, separated by a semicolon. (You will have the occasion to study this behaviour later in some levels :)). Using the above example, any subsequent request to foo.com will include the two cookies set by the server:')</p>
+<pre class="code">
+GET / HTTP/1.1
+Host: foo.com
+Cookie: bar=42; session=12345
+
+HTTP/1.1 200 OK
+...
+</pre>
+
+</article>
+<article>
+
+        <h2>_('Cookies Manipulation')</h2>
+        <p>_('When you opened this page for the first time, the server sent a cookie named') <b>chocolate</b> _('to your browser').
+            _('As cookie are stored client-side, you can easily modify or delete them.')
+            _('There is a lots of way to do this, but the simplest is to use a browser extensions (for Chrome or Chromium, you can use EditThisCookie, for other browsers, check') <a href="http://lmgtfy.com/?q=firefox+edit+cookies">_('here')</a>)</p>
+        <p>{{pmessage}}</p>
+</article>

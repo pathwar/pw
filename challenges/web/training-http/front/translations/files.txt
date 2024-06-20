@@ -1,0 +1,6 @@
+../www/index.php
+../www/templates/home.html
+../www/templates/step1.html
+../www/templates/step2.html
+../www/templates/step3.html
+../www/templates/step4.html
