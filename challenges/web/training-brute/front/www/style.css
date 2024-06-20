@@ -1,0 +1,72 @@
+body {
+    margin: 40px;
+    display: grid;
+    grid-gap: 10px;
+   
+    grid-template-areas:
+    "header  header  header"
+    "content content content"
+    "footer  footer  footer";
+    background-color: #fff;
+    color: #444;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+  }
+  .sidebar a{
+      display: block;
+  }
+  
+  .content {
+    grid-area: content;
+    position: relative;
+  }
+  
+  header {
+    grid-area: header;
+    text-align: center;
+  }
+  
+  footer {
+    grid-area: footer;
+  }
+
+  
+  header,
+  .footer {
+    background-color: #999;
+  }
+  
+  .topleft {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .topright {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .bottomright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .code {
+    font-family: Consolas,"courier new";
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 2px;
+    font-size: 105%;
+    
+  }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>_('Bruteforce')</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>_('Bruteforce')</h1>
+    </header>
+    <nav class="topright">
+        {{langForm}}
+    </nav>
+    <section class="content">
+        <p>_('The goal of this training is to learn how to write a simple brute force script.')</p>
+     <article>
+        <h2>_('You shall not pass!')</h2>
+     
+          <form name="bruteforce" action="index.php" method="get">
+            Password <input type="text" name="pass" />
+            <input type="submit" value="go" />
+          </form>
+       
+     </article>
+
+     <!-- BEGIN win -->
+     <article>
+        <h2>_('Wisely done! The passphrase is') <b>{{win.PASSPHRASE0}}</h2>
+     </article>
+     <!-- END win -->
+
+     <!-- BEGIN fail -->
+     <article>
+         <h3>_('Invalid password, young mage.')</h3>
+        <img width='600px' src="./gandalf.jpg" alt="u_shall_not_pass" />
+     </article>
+     <!-- END fail -->
+
+
+     <article>
+        <h2>_('Tools')</h2>
+        <ul>
+            <li>_('<b>Network request tool.</b> For this training, you'll have to make several HTTP requests. curl can be handy, but you can use any command or tool you wish.')</li>
+            <li>_('<b>Programmatic iteration.</b> At the core of a brute-force attack is repetition (think battering ram). Here's how to perform a loop in bash:')
+<pre class="code">
+#!/bin/bash
+for i in {1..1000}; do
+    echo -n $i
+done;                
+</pre><br/>
+                _('Warning: <i>echo $i</i> is not the same as <i>echo -n $i</i>.')
+
+            </li>
+            <li>_('You'll also need to generate a MD5 hash from a number (man md5sum, <a href="http://www.php.net/manual/en/function.md5.php">php.net</a>).')</li>
+        </ul>
+     </article>
+
+        <article>
+            <h2>The Form</h2>
+
+<pre class="code">
+{{source1}}
+</pre>
+
+            <p>Take note of the important bits:</p>
+            <ul>
+                <li>_('The action field, which indicates the script called when the form is submitted (here, index.php).')</li>
+                <li>_('The method field, which indicates the type of the HTTP query to be made. In this case, we're using GET, so we must include all of our query parameters in the requested URL. Here's how we format and encode them:')<br/>
+                    <b>/action?param_1=value_1&amp;param_2=value_2&amp;param_3=value_3</b>
+                </li>
+            </ul>
+            <p>_('So, whenever the form is submitted, the page <a href="/index.php?pass=input_value">/index.php?pass=input_value</a>
+            gets called. (Note that you can request this link directly without submitting the form.)')
+            </p>
+        </article>
+        <article>
+            <h2>The hash</h2>
+            <p>_('Here's the PHP code that checks the password:')</p>
+<pre class="code">
+    {{source2}}
+</pre>
+            <p>_('You now have to find the hash using your brute force script. <i>For even the very wise cannot see all ends...</i>')</p>
+        </article>
+    </section>
+    <footer></footer>
+</body>
+</html>

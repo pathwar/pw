@@ -1,0 +1,47 @@
+msgid "Bruteforce"
+msgstr ""
+
+msgid "The goal of this training is to learn how to write a simple brute force script."
+msgstr ""
+
+msgid "You shall not pass!"
+msgstr ""
+
+msgid "Wisely done! The passphrase is"
+msgstr ""
+
+msgid "Invalid password, young mage."
+msgstr ""
+
+msgid "Tools"
+msgstr ""
+
+msgid "<b>Network request tool.</b> For this training, you'll have to make several HTTP requests. curl can be handy, but you can use any command or tool you wish."
+msgstr ""
+
+msgid "<b>Programmatic iteration.</b> At the core of a brute-force attack is repetition (think battering ram). Here's how to perform a loop in bash:"
+msgstr ""
+
+msgid "Warning: <i>echo $i</i> is not the same as <i>echo -n $i</i>."
+msgstr ""
+
+msgid "You'll also need to generate a MD5 hash from a number (man md5sum, <a href=\"http://www.php.net/manual/en/function.md5.php\">php.net</a>)."
+msgstr ""
+
+msgid "The action field, which indicates the script called when the form is submitted (here, index.php)."
+msgstr ""
+
+msgid "The method field, which indicates the type of the HTTP query to be made. In this case, we're using GET, so we must include all of our query parameters in the requested URL. Here's how we format and encode them:"
+msgstr ""
+
+msgid ""
+"So, whenever the form is submitted, the page <a href=\"/index.php?pass=input_value\">/index.php?pass=input_value</a>"
+"            gets called. (Note that you can request this link directly without submitting the form.)"
+msgstr ""
+
+msgid "Here's the PHP code that checks the password:"
+msgstr ""
+
+msgid "You now have to find the hash using your brute force script. <i>For even the very wise cannot see all ends...</i>"
+msgstr ""
+
